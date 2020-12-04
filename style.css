@@ -210,6 +210,12 @@ form.sign-up-form{
     font-weight: 600;
     font-size: 0.8rem;
 }
+.btn.transparent:hover{
+    background-color: white;
+    color: #272F38;
+    animation: 1.1s ease-in;
+}
+
 
 .image{
     width: 100%;
