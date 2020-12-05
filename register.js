@@ -16,10 +16,11 @@ firebase.analytics();
 const auth = firebase.auth();
 
 function signup(){
-    var email = document.getElementById("Email");
-    var password = document.getElementById("Password");
+    var email = document.getElementById("Email_up");
+    var password = document.getElementById("Password_up");
 
     const promise = auth.createUserWithEmailAndPassword(email,password);
     promise.catch(e => alert(e.message));
     alert("Cadastro efetuado com sucesso!")
+    console.log("cadastrou");
 }
