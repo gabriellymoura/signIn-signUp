@@ -8,6 +8,14 @@
         src = "https://kit.fontawesome.com/64d58efce2.js"
         crossorigin = "anonymous"
     ></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,13 +26,13 @@
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" id="Username">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" id="Password"> 
                     </div>
-                    <input type="submit" value="Login" class="btn solid">
+                    <input type="submit" value="Login" class="btn solid" onclick="signin()" >
                     <p class="social-text">Or Sign in with social plataforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -45,17 +53,17 @@
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" id="Username">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Email" id="Email">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" id="Password">
                     </div>
-                    <input type="submit" value="Sign up" class="btn solid">
+                    <input type="submit" value="Sign up" class="btn solid" onclick="signup()">
                     <p class="social-text">Or Sign up with social plataforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -78,8 +86,8 @@
             <div class="panel left-panel">
                 <div class="content">
                     <h3>NOVO POR AQUI?</h3>
-                    <p> It is a long established fact 
-                        that a reader will be distracted   
+                    <p> It is a long established fact that a reader will be distracted
+                        by the readable content of a page
                     </p>
                     <button class="btn transparent" id="sign-up-btn">CAdastrar</button>
                 </div>
@@ -99,5 +107,6 @@
         </div>
     </div>
     <script src="app.js"></script>
+    <script src="register.js"></script>
 </body>
 </html>
