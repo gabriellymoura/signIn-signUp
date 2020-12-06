@@ -8,12 +8,7 @@
         src = "https://kit.fontawesome.com/64d58efce2.js"
         crossorigin = "anonymous"
     ></script>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
 
     <link rel="stylesheet" href="style.css">
@@ -22,65 +17,71 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="" class="sign-in-form">
-                    <h2 class="title">Sign in</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" id="Username_in">
+                       <!-- <form id="app"> -->
+                <div class="form">     
+                    <div action="" class="sign-in-form">
+                        <h2 class="title">Sign in</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="email" placeholder="Email" id="Username_in">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" id="Password_in"> 
+                        </div>
+                    
+                    
+                        <button type="submit" value="Login" class="btn solid" id="btn-signin">Sign in</button>
+                        <p class="social-text">Or Sign in with social plataforms</p>
+                    
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" id="Password_in"> 
+                    <div action="" class="sign-up-form">
+                        <h2 class="title">Sign up</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" id="Username_up">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="Email" id="Email_up">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" id="Password_up">
+                        </div>
+                    
+                        <button type="submit" class="btn solid" id="btn-signup">Sign Up</button>
+                        <p class="social-text">Or Sign up with social plataforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
                     </div>
-                    <input type="submit" value="Login" class="btn solid" onclick="signin()" >
-                    <p class="social-text">Or Sign in with social plataforms</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </form>
-                <form action="" class="sign-up-form">
-                    <h2 class="title">Sign up</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" id="Username_up">
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-envelope"></i>
-                        <input type="text" placeholder="Email" id="Email_up">
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" id="Password_up">
-                    </div>
-                    <input type="submit" value="Sign up" class="btn solid" onclick="signup()">
-                    <button type="submit" class="btn solid" onclick="signup()">Sign Up</button>
-                    <p class="social-text">Or Sign up with social plataforms</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
         <div class="panels-container">
@@ -108,6 +109,7 @@
         </div>
     </div>
     <script src="app.js"></script>
-    <script src="register.js"></script>
+    <script src="firebase.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

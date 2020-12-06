@@ -44,17 +44,17 @@ body,input{
 
 .signin-signup{
     position: absolute;
-    top:50%;
-    left:75%;
+    top: 80%;
+    left: 75%;
     transform: translate(-50%,-50%);
     width: 50%;
     display: grid;
     grid-template-columns: 1fr;
     z-index: 5;
-    transition: 1s 0.7s ease-in-out;
+    transition: 2s 0.7s ease-in-out;
 }
 
-form{
+.form{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,15 +63,15 @@ form{
     overflow: hidden;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    transition: 0.2s 0.7s ease-in-out;
 }
 
-form.sign-in-form{
+.form .sign-in-form{
     z-index: 2;
 }
-form.sign-up-form{
+.form .sign-up-form{
     z-index: 1;
     opacity: 0;
+
 }
 
 .title{
@@ -251,12 +251,14 @@ form.sign-up-form{
 
 .container.sign-up-mode .signin-signup{
     left: 25%;
+    top: 20%;
+
 }
-.container.sign-up-mode form.sign-in-form{
-        z-index: 1;
-        opacity: 0;
+.container.sign-up-mode .form .sign-in-form{
+    z-index: 1;
+    opacity: 0;
 }
-.container.sign-up-mode form.sign-up-form{
+.container.sign-up-mode .form .sign-up-form{
     z-index: 2;
     opacity: 1;
 }
@@ -350,7 +352,7 @@ form.sign-up-form{
 }
 
 @media (max-width: 570px){
-    form{
+    .form{
         padding: 0 1.5rem;
     }
     .image{
